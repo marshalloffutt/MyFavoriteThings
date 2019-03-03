@@ -6,7 +6,12 @@ namespace MyFavoriteThings
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var myBike = new Bicycle("Red", true);
+
+            myBike.Ride();
+            myBike.BellCheck();
+
+            Console.ReadKey();
         }
     }
 }
