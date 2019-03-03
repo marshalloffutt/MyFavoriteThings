@@ -11,6 +11,12 @@ namespace MyFavoriteThings
             myBike.Ride();
             myBike.BellCheck();
 
+            var myGuitar = new Guitar("Gibson", "ES-335", GuitarType.electric);
+
+            myGuitar.shred();
+            myGuitar.strum();
+
+
             Console.ReadKey();
         }
     }
