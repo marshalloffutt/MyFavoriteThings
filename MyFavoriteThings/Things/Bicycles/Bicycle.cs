@@ -2,23 +2,25 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MyFavoriteThings
+namespace MyFavoriteThings.Things.Bicycles
 {
-    class Bicycle
+    abstract class Bicycle
     {
         // Properties
-        public string Color { get; }
-        public bool HasBell { get; }
+        public string Color { get; protected set; }
+        public bool HasBell { get; protected set; }
+        public string Speed { get; protected set; }
 
         // Constructor
-        public Bicycle(string color, bool hasBell)
+        protected Bicycle(string color, bool hasBell, string speed)
         {
             Color = color;
             HasBell = hasBell;
+            Speed = speed;
         }
 
         // Methods
-        public void Ride()
+        public virtual void Ride()
         {
             Console.WriteLine("You ride your bike around the block.");
         }
